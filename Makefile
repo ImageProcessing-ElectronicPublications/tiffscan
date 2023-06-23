@@ -17,6 +17,9 @@ INSTALL = /usr/bin/install -c
 
 all : $(TARGET)
 
+$(TARGET): $(TARGET).c
+	$(CC) $(CFLAGS) $^ $(LDFLAGS) $(LIBS) -o $@
+
 clean:
 	rm -f $(TARGET) *~
 
